@@ -66,7 +66,6 @@ extension SearchCityController: UITableViewDataSource {
         cell.cityLabel.text = matchedCities[indexPath.row]
         return cell
     }
-    
 }
 
 extension SearchCityController: UITableViewDelegate {
