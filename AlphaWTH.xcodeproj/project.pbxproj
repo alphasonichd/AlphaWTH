@@ -23,6 +23,7 @@
 		8B55EF0D25E2EEB600F5E31C /* WeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55EF0C25E2EEB600F5E31C /* WeatherModel.swift */; };
 		8B55EF1225E4329700F5E31C /* DailyCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B55EF1025E4329700F5E31C /* DailyCollectionViewCell.swift */; };
 		8B55EF1325E4329700F5E31C /* DailyCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B55EF1125E4329700F5E31C /* DailyCollectionViewCell.xib */; };
+		8B6035742656DA6300DA9B1A /* DateFormatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6035732656DA6300DA9B1A /* DateFormatters.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		8B55EF0C25E2EEB600F5E31C /* WeatherModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherModel.swift; sourceTree = "<group>"; };
 		8B55EF1025E4329700F5E31C /* DailyCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyCollectionViewCell.swift; sourceTree = "<group>"; };
 		8B55EF1125E4329700F5E31C /* DailyCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DailyCollectionViewCell.xib; sourceTree = "<group>"; };
+		8B6035732656DA6300DA9B1A /* DateFormatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatters.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 				8B55EF0525E2E60C00F5E31C /* NetworkService.swift */,
 				8B55EF0825E2EC5200F5E31C /* WeatherDataJSON.swift */,
 				8B55EF0C25E2EEB600F5E31C /* WeatherModel.swift */,
+				8B6035732656DA6300DA9B1A /* DateFormatters.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -217,6 +220,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8B6035742656DA6300DA9B1A /* DateFormatters.swift in Sources */,
 				8B55EED125E276F500F5E31C /* SearchCityController.swift in Sources */,
 				8B55EF0925E2EC5200F5E31C /* WeatherDataJSON.swift in Sources */,
 				8B55EECD25E276F500F5E31C /* AppDelegate.swift in Sources */,

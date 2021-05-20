@@ -9,7 +9,6 @@ import UIKit
 
 class SearchCityController: UIViewController {
     
-    
     private let searchData = SearchService()
     private var matchedCities: [String] = [] {
         didSet {
@@ -34,6 +33,7 @@ class SearchCityController: UIViewController {
             count += 1
         }
         setupTableView()
+        setupSeachBar()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -45,10 +45,16 @@ class SearchCityController: UIViewController {
         cityTableView.dataSource = self
         cityTableView.register(UINib(nibName: "SearchTableViewCell", bundle: nil), forCellReuseIdentifier: K.searchCell)
     }
+    
+    func setupSeachBar() {
+        citySearchBar.barTintColor = .clear
+        citySearchBar.backgroundColor = .clear
+        citySearchBar.isTranslucent = true
+        citySearchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+    }
 }
 
 extension SearchCityController: UISearchBarDelegate {
-    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         matchedCities = searchData.getMatchedCities(for: searchText)
     }

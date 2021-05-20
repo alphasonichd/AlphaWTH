@@ -113,7 +113,7 @@ extension WeatherDataViewController: UICollectionViewDataSource {
         
         let dayData = weatherModel.dailyData[indexPath.item]
         
-        cell.dateLabel.text = String(dayData.dt)
+        cell.dateLabel.text = dayData.dateString
         cell.iconImageView.image = UIImage(systemName: WeatherModel.systemIconName(for: dayData.weather[0].id))
         cell.tempLabel.text = "\(String(format: "%.1f", dayData.temp.day))°C"
         cell.descriptionLabel.text = dayData.weather[0].description
@@ -123,3 +123,9 @@ extension WeatherDataViewController: UICollectionViewDataSource {
     
 }
 
+extension DailyInfo {
+    var dateString: String {
+        let date = Date(timeIntervalSince1970: TimeInterval(dt))
+        return DateFormatters.dateFormatter.string(from: date)
+    }
+}
