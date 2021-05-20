@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol RewindDelegate: AnyObject {
+    func didRewind()
+}
+
 class SearchCityController: UIViewController {
     
     private let searchData = SearchService()
@@ -24,7 +28,7 @@ class SearchCityController: UIViewController {
         super.viewDidLoad()
         navigationController?.isNavigationBarHidden = true
         citySearchBar.delegate = self
-        appLabel.text = ""
+        appLabel?.text = ""
         var count = 0.0
         for letter in "❄️AlphaWTH" {
             Timer.scheduledTimer(withTimeInterval: 0.1 * count, repeats: false) { (timer) in
@@ -85,9 +89,20 @@ extension SearchCityController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         let city = matchedCities[indexPath.row]
         let weatherDataViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "WeatherDataViewController") { coder in
-            return WeatherDataViewController(coder: coder, city: city)
+            return WeatherDataViewController(coder: coder, city: city, delegate: self)
         }
         navigationController?.pushViewController(weatherDataViewController, animated: true)
     }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return tableView.frame.height / 5
+    }
 }
 
+extension SearchCityController: RewindDelegate {
+    func didRewind() {
+        citySearchBar.resignFirstResponder()
+        citySearchBar.text = nil
+        matchedCities = []
+    }
+}

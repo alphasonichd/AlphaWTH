@@ -9,10 +9,13 @@ import UIKit
 
 class WeatherDataViewController: UIViewController {
     
+    weak var delegate: RewindDelegate?
+    
     let city: String
     
-    init?(coder: NSCoder, city: String) {
+    init?(coder: NSCoder, city: String, delegate: RewindDelegate) {
         self.city = city
+        self.delegate = delegate
         super.init(coder: coder)
     }
     
@@ -48,6 +51,13 @@ class WeatherDataViewController: UIViewController {
         title = "Weather for \(city)"
 
         loadWeatherForecast()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if self.isMovingFromParent {
+            delegate?.didRewind()
+        }
     }
     
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {

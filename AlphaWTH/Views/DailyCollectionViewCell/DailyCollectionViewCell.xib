@@ -11,36 +11,40 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="dailyCell" id="gTV-IL-0wX" customClass="DailyCollectionViewCell" customModule="AlphaWTH" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+            <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
             <autoresizingMask key="autoresizingMask"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CKg-RK-vHr">
-                        <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                        <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="b7J-FS-KCT">
-                                <rect key="frame" x="0.0" y="0.0" width="150" height="150"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="b7J-FS-KCT">
+                                <rect key="frame" x="0.0" y="0.0" width="150" height="151"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="825-Rd-rFR">
-                                        <rect key="frame" x="0.0" y="0.0" width="150" height="88.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="100"/>
                                         <color key="tintColor" name="fontColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="i2R-oC-WD5"/>
+                                            <constraint firstAttribute="height" constant="100" id="poH-pf-saw"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNu-C5-3jj">
-                                        <rect key="frame" x="0.0" y="88.5" width="150" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yNu-C5-3jj">
+                                        <rect key="frame" x="0.0" y="100" width="150" height="10"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="fontColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWr-uG-sXq">
-                                        <rect key="frame" x="0.0" y="109" width="150" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="110" width="150" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="fontColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RK-1t-7Uz">
-                                        <rect key="frame" x="0.0" y="129.5" width="150" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3RK-1t-7Uz">
+                                        <rect key="frame" x="0.0" y="130.5" width="150" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="fontColor"/>
                                         <nil key="highlightedColor"/>
@@ -50,12 +54,10 @@
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="150" id="PdF-14-ped"/>
                             <constraint firstAttribute="bottom" secondItem="b7J-FS-KCT" secondAttribute="bottom" id="XVj-bk-Znb"/>
                             <constraint firstAttribute="trailing" secondItem="b7J-FS-KCT" secondAttribute="trailing" id="cZU-8F-xDT"/>
                             <constraint firstItem="b7J-FS-KCT" firstAttribute="top" secondItem="CKg-RK-vHr" secondAttribute="top" id="oEc-C5-IHx"/>
                             <constraint firstItem="b7J-FS-KCT" firstAttribute="leading" secondItem="CKg-RK-vHr" secondAttribute="leading" id="rHW-VL-SRV"/>
-                            <constraint firstAttribute="height" constant="150" id="vBg-qd-Yug"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -67,14 +69,14 @@
                 <constraint firstItem="CKg-RK-vHr" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="eL1-By-aX8"/>
                 <constraint firstAttribute="trailing" secondItem="CKg-RK-vHr" secondAttribute="trailing" id="mpH-CO-3XZ"/>
             </constraints>
-            <size key="customSize" width="150" height="150"/>
+            <size key="customSize" width="100" height="151"/>
             <connections>
                 <outlet property="dateLabel" destination="3RK-1t-7Uz" id="eP5-gF-WrN"/>
                 <outlet property="descriptionLabel" destination="rWr-uG-sXq" id="ZQs-nv-erF"/>
                 <outlet property="iconImageView" destination="825-Rd-rFR" id="lyf-IT-lCk"/>
                 <outlet property="tempLabel" destination="yNu-C5-3jj" id="K6J-4O-vQN"/>
             </connections>
-            <point key="canvasLocation" x="204.34782608695653" y="63.616071428571423"/>
+            <point key="canvasLocation" x="220" y="62"/>
         </collectionViewCell>
     </objects>
     <resources>
