@@ -9,6 +9,7 @@ import UIKit
 
 class SearchCityController: UIViewController {
     
+    
     private let searchData = SearchService()
     private var matchedCities: [String] = [] {
         didSet {
